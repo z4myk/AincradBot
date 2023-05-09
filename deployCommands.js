@@ -3,15 +3,14 @@ require('dotenv').config();
 const {SlashCommandBuilder, Routes} = require('discord.js');
 //requerir rest para enviar peticiones a la api de discord
 const {REST} = require('@discordjs/rest')
+
 const BOT_ID = process.env.BOT_ID;
 const SERVER_ID = process.env.SERVER_ID;
 const token = process.env.LOGIN_TOKEN;
 
 const commands = [
     new SlashCommandBuilder().setName('ping').setDescription('Pong!'),
-    new SlashCommandBuilder().setName('veloren').setDescription('Veloren: veloren.aincradlatam.net'),
-    new SlashCommandBuilder().setName('minecraft').setDescription('Minecraft: Minecraft.aincradlatam.net'),
-    new SlashCommandBuilder().setName('web').setDescription("Sitio oficial de Aintech Online, obten promociones, ofertas y juegos gratis!")
+    new SlashCommandBuilder().setName('web').setDescription('Sitio oficial de Aintech Online'),
 ].map(command => command.toJSON())
 
 

@@ -13,24 +13,15 @@ const web = new EmbedBuilder()
   })
   .setTitle("Web Aintech Online")
   .setURL("https://aintech.online/")
-  .setDescription("Sitio oficial de Aintech Online, obten promociones, ofertas y juegos gratis!");
+  .setDescription("Sitio oficial de Aintech Online, obten promociones, ofertas y juegos gratis!")
+  .setColor("White");
+
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isChatInputCommand) return;
   const { commandName } = interaction;
   if (commandName === "ping") {
-    await interaction.reply("Pong! jejeje");
-  }
-
-  if (commandName === "veloren") {
-    await interaction.reply(
-      "Veloren: veloren.aincradlatam.net"
-    );
-  }
-  if (commandName === "minecraft") {
-    await interaction.reply(
-      "Minecraft: minecraft.aincradlatam.net"
-    );
+    await interaction.reply('Pong');
   }
   if (commandName === "web" || "sitio") {
     await interaction.reply({ embeds: [web] });
