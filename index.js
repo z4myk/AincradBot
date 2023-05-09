@@ -9,17 +9,17 @@ client.on("bot is active", () => {
 
 const web = new EmbedBuilder()
   .setAuthor({
-    name: "AINCRAD LATAM",
+    name: "AINTECH ONLINE",
   })
-  .setTitle("Web Aincrad Network")
-  .setURL("https://www.aincradlatam.net/")
-  .setDescription("Sitio oficial de Aincrad Latam Network");
+  .setTitle("Web Aintech Online")
+  .setURL("https://aintech.online/")
+  .setDescription("Sitio oficial de Aintech Online, obten promociones, ofertas y juegos gratis!");
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isChatInputCommand) return;
   const { commandName } = interaction;
   if (commandName === "ping") {
-    await interaction.reply("Pong! trolleado");
+    await interaction.reply("Pong! jejeje");
   }
 
   if (commandName === "veloren") {
@@ -32,7 +32,7 @@ client.on("interactionCreate", async (interaction) => {
       "Minecraft: minecraft.aincradlatam.net"
     );
   }
-  if (commandName === "web") {
+  if (commandName === "web" || "sitio") {
     await interaction.reply({ embeds: [web] });
   }
 });

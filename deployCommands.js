@@ -11,7 +11,7 @@ const commands = [
     new SlashCommandBuilder().setName('ping').setDescription('Pong!'),
     new SlashCommandBuilder().setName('veloren').setDescription('Veloren: veloren.aincradlatam.net'),
     new SlashCommandBuilder().setName('minecraft').setDescription('Minecraft: Minecraft.aincradlatam.net'),
-    new SlashCommandBuilder().setName('web').setDescription('Sitio oficial Aincrad Network')
+    new SlashCommandBuilder().setName('web').setDescription("Sitio oficial de Aintech Online, obten promociones, ofertas y juegos gratis!")
 ].map(command => command.toJSON())
 
 
